@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <script>
+        let Person = function(name, gender, age){
+            this.name = name;
+            this.gender = gender;
+            this.age = age;
+            this.getAge = function(){
+                return this.age;
+            }
+        }
+
+        let person01 = new Person('Alice','女',22);
+        let person02 = new Person('Bill','男',18);
+
+        console.log(person01.name);
+        console.log(person02.name);
+
+        console.log(person01.getAge() );
+        console.log(person02.getAge() );
+    </script>
+
+
+
+
+</body>
+</html>

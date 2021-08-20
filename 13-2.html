@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" style="width: 200px; height: 100x;">按下後改變文字 </button>
+    <hr>
+    <div style="width: 150px; height: 100px; border: 1px solid;" >請用 滑鼠移過此元素</div>
+    <hr>
+    <img class="puppy" src="https://img.ltn.com.tw/Upload/news/600/2019/03/30/phpUCF6ub.jpg" />
+
+    <script>
+        document.querySelector('button#btn').addEventListener('click', function(event){
+            event.target.innerText = '已改變';
+        });
+
+        let div = document.querySelector('div');
+        div.addEventListener('mousemove', function(event){
+            this.style.backgroundColor = '#33ffff';
+        });
+        div.addEventListener('mouseout', function(event){
+            this.style.backgroundColor = '#ff0000';
+        });
+
+
+        document.querySelector('img.puppy').addEventListener('mousemove', function(event){
+            this.setAttribute('src','https://memeprod.sgp1.digitaloceanspaces.com/user-wtf/1588940669653.jpg')
+        });
+        document.querySelector('img.puppy').addEventListener('mouseout', function(event){
+            this.setAttribute('src','https://img.ltn.com.tw/Upload/news/600/2019/03/30/phpUCF6ub.jpg')
+        });
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
